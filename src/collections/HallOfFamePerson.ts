@@ -3,6 +3,9 @@ import { CollectionConfig } from "payload/types";
 export const HallOfFamePerson: CollectionConfig = {
     slug: 'hof-person',
     labels: { singular: 'Hall of Fame person', plural: 'Hall of Fame people'},
+    access: {
+        read: () => true
+    },
     admin: {
         useAsTitle: 'name'
     },

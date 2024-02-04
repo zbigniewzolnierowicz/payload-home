@@ -6,6 +6,9 @@ export const HallOfFameEntry: CollectionConfig = {
     admin: {
         useAsTitle: 'title',
     },
+    access: {
+        read: () => true
+    },
     fields: [
         {
             name: 'id',
