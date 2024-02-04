@@ -11,6 +11,12 @@ export const Blog: CollectionConfig = {
     },
     fields: [
         {
+            name: 'slug',
+            type: 'text',
+            required: true,
+            unique: true,
+        },
+        {
             name: 'title',
             type: 'text',
             required: true,
@@ -28,5 +34,19 @@ export const Blog: CollectionConfig = {
             name: 'date',
             type: 'date',
         },
+    ],
+    endpoints: [
+        {
+            path: '/slug/:slug',
+            method: 'get',
+            handler: async (req, res) => {
+                try {
+                    const blog = await req.payload.find({ collection: 'blog', where: { slug: { equals: req.params.slug } } })
+                    res.status(200).send(blog.docs[0])
+                } catch {
+                    res.status(404)
+                }
+            }
+        }
     ]
 }
