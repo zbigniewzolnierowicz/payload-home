@@ -19,18 +19,18 @@ CREATE TABLE IF NOT EXISTS "users" (
 
 CREATE TABLE IF NOT EXISTS "hof_images" (
 	"_order" integer NOT NULL,
-	"_parent_id" varchar NOT NULL,
+	"_parent_id" integer NOT NULL,
 	"id" varchar PRIMARY KEY NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS "hof_people" (
 	"_order" integer NOT NULL,
-	"_parent_id" varchar NOT NULL,
+	"_parent_id" integer NOT NULL,
 	"id" varchar PRIMARY KEY NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS "hof" (
-	"id" varchar PRIMARY KEY NOT NULL,
+	"id" serial PRIMARY KEY NOT NULL,
 	"title" varchar NOT NULL,
 	"transcript" jsonb,
 	"date" timestamp(3) with time zone,
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS "hof" (
 CREATE TABLE IF NOT EXISTS "hof_rels" (
 	"id" serial PRIMARY KEY NOT NULL,
 	"order" integer,
-	"parent_id" varchar NOT NULL,
+	"parent_id" integer NOT NULL,
 	"path" varchar NOT NULL,
 	"media_id" integer,
 	"hof_person_id" integer

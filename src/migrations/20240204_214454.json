@@ -1,5 +1,5 @@
 {
-  "id": "1d28cea7-0c4e-4cb5-b9e5-2a61f10cef42",
+  "id": "8a57c75f-665c-414c-a96c-b7897e770fe0",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "version": "5",
   "dialect": "pg",
@@ -103,7 +103,7 @@
         },
         "_parent_id": {
           "name": "_parent_id",
-          "type": "varchar",
+          "type": "integer",
           "primaryKey": false,
           "notNull": true
         },
@@ -160,7 +160,7 @@
         },
         "_parent_id": {
           "name": "_parent_id",
-          "type": "varchar",
+          "type": "integer",
           "primaryKey": false,
           "notNull": true
         },
@@ -211,7 +211,7 @@
       "columns": {
         "id": {
           "name": "id",
-          "type": "varchar",
+          "type": "serial",
           "primaryKey": true,
           "notNull": true
         },
@@ -279,7 +279,7 @@
         },
         "parent_id": {
           "name": "parent_id",
-          "type": "varchar",
+          "type": "integer",
           "primaryKey": false,
           "notNull": true
         },
