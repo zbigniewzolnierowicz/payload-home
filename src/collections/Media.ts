@@ -18,16 +18,12 @@ export const Media: CollectionConfig = {
       {
         name: 'card',
         width: 768,
-        height: 1024,
+        height: undefined,
         position: 'centre',
       },
       {
         name: 'tablet',
         width: 1024,
-        // By specifying `undefined` or leaving a height undefined,
-        // the image will be sized to a certain width,
-        // but it will retain its original aspect ratio
-        // and calculate a height automatically.
         height: undefined,
         position: 'centre',
       },
