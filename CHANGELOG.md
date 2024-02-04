@@ -1,5 +1,11 @@
 # payload-home
 
+## 1.2.0
+
+### Minor Changes
+
+- 1dad8c7: remove user-set ID
+
 ## 1.1.2
 
 ### Patch Changes
