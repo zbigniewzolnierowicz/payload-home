@@ -1,5 +1,12 @@
 # payload-home
 
+## 1.0.5
+
+### Patch Changes
+
+- b8f92b9: update gitignore
+- 8863ccf: remove src/media
+
 ## 1.0.4
 
 ### Patch Changes
