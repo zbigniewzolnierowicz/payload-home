@@ -17,7 +17,12 @@ export const Blog: CollectionConfig = {
         },
         {
             name: 'content',
-            type: 'richText'
+            type: 'richText',
+            required: true
+        },
+        {
+            name: 'summary',
+            type: 'text',
         },
         {
             name: 'date',
