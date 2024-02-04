@@ -5,6 +5,7 @@ import { postgresAdapter } from '@payloadcms/db-postgres'
 import { viteBundler } from '@payloadcms/bundler-vite'
 import { buildConfig } from 'payload/config'
 import { slateEditor } from '@payloadcms/richtext-slate'
+import { lexicalEditor } from '@payloadcms/richtext-lexical'
 
 import Users from './collections/Users'
 import { HallOfFameEntry } from './collections/HallOfFameEntry'
@@ -17,7 +18,7 @@ export default buildConfig({
     user: Users.slug,
     bundler: viteBundler(),
   },
-  editor: slateEditor({}),
+  editor: lexicalEditor({}),
   collections: [Users, HallOfFameEntry, HallOfFamePerson, Media, Blog],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
