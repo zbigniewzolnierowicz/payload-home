@@ -1,5 +1,12 @@
 # payload-home
 
+## 1.1.1
+
+### Patch Changes
+
+- 332866e: add slugs to blog
+- a912746: make thumbnails not crop
+
 ## 1.1.0
 
 ### Minor Changes
