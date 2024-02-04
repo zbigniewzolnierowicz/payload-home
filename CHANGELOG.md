@@ -1,5 +1,11 @@
 # payload-home
 
+## 1.0.3
+
+### Patch Changes
+
+- fixing the ports not working
+
 ## 1.0.2
 
 ### Patch Changes
