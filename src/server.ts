@@ -14,6 +14,9 @@ const start = async () => {
   await payload.init({
     secret: process.env.PAYLOAD_SECRET,
     express: app,
+    loggerOptions: {
+      level: 'trace'
+    },
     onInit: async () => {
       payload.logger.info(`Payload Admin URL: ${payload.getAdminURL()}`)
     },
