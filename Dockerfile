@@ -1,26 +1,30 @@
-FROM node:18.8-alpine as base
+FROM node:20 as base
+
+LABEL org.opencontainers.image.source https://github.com/zbigniewzolnierowicz/payload-home
+RUN npm install -g pnpm
 
 FROM base as builder
 
-WORKDIR /home/node/app
-COPY package*.json ./
+WORKDIR /app
+COPY package*.json ./ 
+COPY pnpm-lock.yaml ./
 
 COPY . .
-RUN yarn install
-RUN yarn build
+RUN pnpm install
+RUN pnpm build
 
 FROM base as runtime
 
 ENV NODE_ENV=production
 ENV PAYLOAD_CONFIG_PATH=dist/payload.config.js
 
-WORKDIR /home/node/app
-COPY package*.json  ./
-COPY yarn.lock ./
+WORKDIR /app
+COPY package*.json ./ 
+COPY pnpm-lock.yaml ./
 
-RUN yarn install --production
-COPY --from=builder /home/node/app/dist ./dist
-COPY --from=builder /home/node/app/build ./build
+RUN pnpm install --production
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/build ./build
 
 EXPOSE 3000
 
