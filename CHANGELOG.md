@@ -1,5 +1,12 @@
 # payload-home
 
+## 1.0.6
+
+### Patch Changes
+
+- 1bb005a: disable cropping of images
+- afb8dab: adjust read permissions
+
 ## 1.0.5
 
 ### Patch Changes
