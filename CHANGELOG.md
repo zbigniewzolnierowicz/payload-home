@@ -1,5 +1,11 @@
 # payload-home
 
+## 1.1.2
+
+### Patch Changes
+
+- f2028d0: add migrations
+
 ## 1.1.1
 
 ### Patch Changes
