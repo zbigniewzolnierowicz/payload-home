@@ -4,7 +4,6 @@ import { payloadCloud } from '@payloadcms/plugin-cloud'
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { viteBundler } from '@payloadcms/bundler-vite'
 import { buildConfig } from 'payload/config'
-import { slateEditor } from '@payloadcms/richtext-slate'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
 
 import Users from './collections/Users'
@@ -26,7 +25,6 @@ export default buildConfig({
   graphQL: {
     schemaOutputFile: path.resolve(__dirname, 'generated-schema.graphql'),
     disable: false,
-    disablePlaygroundInProduction: process.env['NODE_ENV'] === "production"
   },
   plugins: [payloadCloud()],
   db: postgresAdapter({

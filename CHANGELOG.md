@@ -1,5 +1,11 @@
 # payload-home
 
+## 1.0.4
+
+### Patch Changes
+
+- disable stuff
+
 ## 1.0.3
 
 ### Patch Changes
