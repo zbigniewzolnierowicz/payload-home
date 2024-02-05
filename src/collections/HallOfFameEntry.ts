@@ -33,6 +33,11 @@ export const HallOfFameEntry: CollectionConfig = {
         {
             name: 'date',
             type: 'date',
+            admin: {
+                date: {
+                    pickerAppearance: 'dayAndTime'
+                }
+            },
         },
         {
             name: 'people',
