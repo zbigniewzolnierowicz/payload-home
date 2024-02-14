@@ -19,17 +19,21 @@
     "tag": "changeset tag"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.513.0",
+    "@aws-sdk/lib-storage": "^3.513.0",
     "@payloadcms/bundler-vite": "^0.1.6",
     "@payloadcms/bundler-webpack": "^1.0.0",
-    "@payloadcms/db-postgres": "^0.x",
+    "@payloadcms/db-postgres": "^0.5.2",
     "@payloadcms/plugin-cloud": "^3.0.0",
-    "@payloadcms/richtext-lexical": "^0.5.2",
+    "@payloadcms/plugin-cloud-storage": "^1.0.19",
+    "@payloadcms/richtext-lexical": "^0.6.1",
     "@payloadcms/richtext-slate": "^1.4.0",
+    "aws-crt": "^1.21.1",
     "cross-env": "^7.0.3",
-    "dotenv": "^8.2.0",
+    "dotenv": "^16.4.4",
     "drizzle-orm": "^0.29.3",
     "express": "^4.17.1",
-    "payload": "^2.0.0"
+    "payload": "^2.11.0"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
