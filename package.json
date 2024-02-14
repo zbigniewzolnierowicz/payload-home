@@ -1,7 +1,7 @@
 {
   "name": "payload-home",
   "description": "A blank template to get started with Payload",
-  "version": "1.2.1",
+  "version": "1.4.0",
   "main": "dist/server.js",
   "license": "MIT",
   "scripts": {
